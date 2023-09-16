@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 4f;
     public Rigidbody2D rb;
     Vector2 input;
+    private Vector2 mousePos;
+    public Camera Camera;
 
     public SpriteRenderer spriteRenderer;
     public Sprite visible;
@@ -35,6 +37,11 @@ public class PlayerController : MonoBehaviour
                 speed = 4f;
             }
         }
+
+        //Player points towards mouse
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 perpendicular = (Vector2)transform.position - mousePos;
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, perpendicular);
     }
 
     void FixedUpdate() {
