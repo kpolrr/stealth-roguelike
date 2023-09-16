@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //vectors normallized so that the player doesnt move faster diagonally
-        input = new Vector2(Input.GetAxisRaw("Horizontal") * Time.deltaTime, Input.GetAxisRaw("Vertical") * Time.deltaTime).normalized;
+        input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
     }
 
     void FixedUpdate() {
