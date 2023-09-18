@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   rb: {fileID: 7595161}
+  Camera: {fileID: 0}
   spriteRenderer: {fileID: 7595159}
   visible: {fileID: 21300000, guid: afc437c5dea4a35499a6b35995303842, type: 3}
   invisible: {fileID: 21300000, guid: 9c909eb3861b8794b8b7768caeb2e5f1, type: 3}
